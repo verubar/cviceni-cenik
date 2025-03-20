@@ -39,3 +39,7 @@ const selectPlan = (planNumber) => {
         plan3Elem.classList.remove('plan--selected');
     }
   };
+
+  selectPlan(2);
+  selectPlan(3);
+  selectPlan(1);
