@@ -19,18 +19,23 @@ const selectPlan = (planNumber) => {
 
     if (planNumber === 1) {
         plan1Elem.classList.add('plan--selected');
-        //console.log("Zvolen plán 1");
+        plan2Elem.classList.remove('plan--selected');
+        plan3Elem.classList.remove('plan--selected');
+        console.log("Zvolen plán 1");
     } else if (planNumber === 2) {
         plan2Elem.classList.add('plan--selected');
         plan1Elem.classList.remove('plan--selected');
-        //console.log("Zvolen plán 2");
+        plan3Elem.classList.remove('plan--selected');
+        console.log("Zvolen plán 2");
     } else if (planNumber === 3) {
         plan3Elem.classList.add('plan--selected');
         plan1Elem.classList.remove('plan--selected');
-        //console.log("Zvolen plán 3");
+        plan2Elem.classList.remove('plan--selected');
+        console.log("Zvolen plán 3");
     } else {
         console.log("Hodnota není zvolena správně");
+        plan1Elem.classList.remove('plan--selected');
+        plan2Elem.classList.remove('plan--selected');
+        plan3Elem.classList.remove('plan--selected');
     }
   };
-
-selectPlan(3);
